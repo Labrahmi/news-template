@@ -4,6 +4,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Inconsolata", monospace;
+  transition:0.8s;
 }
 :root {
   --primary-color: #ff6f61;
@@ -322,9 +323,14 @@ header .bottom-nav .container .bottom-nav-icons a:last-child i:hover {
   gap: 20px;
 }
 .landing .container .landing-left .content {
+  cursor: pointer;
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .landing .container .landing-left .content::before {
   position: absolute;
@@ -385,7 +391,12 @@ header .bottom-nav .container .bottom-nav-icons a:last-child i:hover {
   gap: 5px;
 }
 .landing .container .landing-right .content {
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 .landing .container .landing-right .content img {
   max-width: 100%;
@@ -408,9 +419,13 @@ header .bottom-nav .container .bottom-nav-icons a:last-child i:hover {
 .landing .container .landing-right .content h3:hover {
   color: var(--primary-color);
 }
+
 .landing .container .picture:hover {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+  /* filter: blur(2px);
+  -webkit-filter: blur(2px); */
+  transform: scale(1.1);
+  filter: saturate(100%);
+  transition: 0.8s;
 }
 @media (max-width: 767px) {
   .landing .container {
@@ -490,7 +505,11 @@ header .bottom-nav .container .bottom-nav-icons a:last-child i:hover {
   gap: 10px;
 }
 .category .container article .category-bottom .content {
+  overflow: hidden;
+  display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 .category .container article .category-bottom .content h3 {
   position: absolute;
@@ -509,13 +528,19 @@ header .bottom-nav .container .bottom-nav-icons a:last-child i:hover {
   color: var(--primary-color);
 }
 .category .container article .category-bottom .content img {
+  cursor: pointer;
+  filter: saturate(60%);
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  transition: 0.8s;
+  /* object-fit: cover; */
 }
 .category .container article .category-bottom .content .picture:hover {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+  /* filter: blur(2px);
+  -webkit-filter: blur(2px); */
+  transform: scale(1.1);
+  filter: saturate(100%);
+  transition: 0.8s;
 }
 @media (max-width: 767px) {
   .category .container {
